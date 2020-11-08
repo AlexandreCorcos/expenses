@@ -54,7 +54,7 @@ class _TransactionFormState extends State<TransactionForm> {
               controller: _titleController,
               onSubmitted: (value) => _submitForm(),
               decoration: InputDecoration(
-                labelText: 'Titulo',
+                labelText: 'Description',
               ),
             ),
             TextField(
@@ -62,7 +62,7 @@ class _TransactionFormState extends State<TransactionForm> {
               keyboardType: TextInputType.numberWithOptions(decimal: true),
               onSubmitted: (value) => _submitForm(),
               decoration: InputDecoration(
-                labelText: 'Valor (£)',
+                labelText: 'Value (£)',
               ),
             ),
             Container(
@@ -72,14 +72,14 @@ class _TransactionFormState extends State<TransactionForm> {
                   Expanded(
                     child: Text(
                       _selectedDate == null
-                          ? 'Nenhuma data selecionada!'
+                          ? 'No data found!'
                           : 'Selected date: ${DateFormat('dd/MM/y').format(_selectedDate)}',
                     ),
                   ),
                   FlatButton(
                     textColor: Theme.of(context).primaryColor,
                     child: Text(
-                      'Selecionar Data',
+                      'Select date',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                       ),
